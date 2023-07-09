@@ -1,0 +1,48 @@
+{
+  "name": "split-wise-auth",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:DreamDeals/product-service.git",
+  "author": "Saeed Jalali <saeedjalalisj@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "dev": "npx nodemon",
+    "start": "npm run build && node dist/index.js",
+    "build": "rimraf ./dist && tsc",
+    "prepare": "husky install",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable",
+    "test": "mocha  --require ts-node/register __test__/**/*.test.ts --exit"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.3.2",
+    "@types/sinon": "^10.0.15",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "chai": "^4.3.7",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.22",
+    "pinst": "^3.0.0",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
+    "sinon": "^15.2.0",
+    "supertest": "^6.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "husky": "^8.0.3",
+    "reflect-metadata": "^0.1.13",
+    "typedi": "^0.10.0"
+  }
+}
